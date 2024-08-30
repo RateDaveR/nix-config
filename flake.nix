@@ -46,7 +46,7 @@
        description = ''
        Personal nix-configs.
        '';
-       path = ".";
+       path = "./";
      };
    };
   };
