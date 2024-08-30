@@ -66,7 +66,6 @@
     userName = "DaveVED";
     userEmail = "dave.dennis@gs.com";
     extraConfig = {
-      push = { autoSetupRemote = true; };
       credential.helper = "${
           pkgs.git.override { withLibsecret = true; }
         }/bin/git-credential-libsecret";
