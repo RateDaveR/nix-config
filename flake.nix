@@ -42,7 +42,7 @@
    # };
 
    templates = {
-     daveved = {
+     default = {
        description = ''
        Personal nix-configs.
        '';
