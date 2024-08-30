@@ -1,5 +1,6 @@
 # nix-config (blah)
 
+These are my personal [nixos](https://nixos.org) configuration files.
 
 ## Get to the point
 
