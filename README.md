@@ -6,9 +6,7 @@ Personal nix config for local development box. Started from [this](https://githu
 
 ```
 # git clone https://github.com/DaveVED/nix-config.git
-nix flake init -t github:DaveVED/nix-config
+export NIX_CONFIG="experimental-features = nix-command flakes"
 nix flake update
-# sudo nixos-rebuild switch --flake .#dev
-nix shell nixpkgs#home-manager
-ome-manager switch --flake .#daveved@dev
+sudo nixos-rebuild switch --flake .#dev
 ```
