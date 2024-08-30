@@ -1,6 +1,5 @@
-nix-config (blah)
+# nix-config (blah)
 
-Personal nix config for local development box. Started from [this](https://github.com/Misterio77/nix-starter-configs) tempalte project 
 
 ## Get to the point
 
