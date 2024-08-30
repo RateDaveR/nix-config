@@ -40,5 +40,14 @@
    #     modules = [./home-manager/home.nix];
    #   };
    # };
+
+   templates = {
+     daveved = {
+       description = ''
+       Personal nix-configs.
+       '';
+       path = ".";
+     };
+   };
   };
 }
