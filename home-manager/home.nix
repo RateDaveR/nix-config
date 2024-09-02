@@ -86,9 +86,25 @@
     viAlias = true;
     vimAlias = true;
     vimdiffAlias = true;
-    
+    plugins = with pkgs.vimPlugins; [
+        {
+            plugin = rose-pine;
+            config = "colorscheme rose-pine";
+        }
+    {
+        plugin = nvim-treesitter.withPlugins (treesitter-plugins: 
+                with treesitter-plugins; [
+                    bash
+                    lua
+                    nix
+                    python
+                ]
+        );
+        config = toLuaFile ./nvim/config/plugins/treesitter.lua;
+    }
+    ];
     extraLuaConfig = ''
-      ${builtins.readFile ./nix/config/options.lua}
+      ${builtins.readFile ./nvim/config/options.lua}
     '';
   };       
   programs.firefox.enable = true;
