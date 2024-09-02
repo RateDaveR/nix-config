@@ -94,7 +94,7 @@
       # Be sure to change it (using passwd) after rebooting!
       isNormalUser = true;
       # TODO: Be sure to add any other groups you need (such as networkmanager, audio, docker, etc)
-      extraGroups = ["networkmanager" "wheel" "video"];
+      extraGroups = ["networkmanager" "wheel" "video" "audio" "docker"];
       shell = pkgs.zsh;
       initialPassword = "bingbong";
     };

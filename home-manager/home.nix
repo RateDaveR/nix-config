@@ -73,18 +73,43 @@
   };
   programs.kitty = {
     enable = true;
-    configFile = ../env/.config/kitty/kitty.confg;
   };
-  programs.neovim = {
+  
+  programs.neovim = 
+  let
+    toLua = str: "lua << EOF\n${str}\nEOF\n";
+    toLuaFile = file: "lua << EOF\n${builtins.readFile file}\nEOF\n";
+  in
+  {
     enable = true;
+    
     viAlias = true;
     vimAlias = true;
-  };
+    vimdiffAlias = true;
+    
+    extraLuaConfig = ''
+      ${builtins.readFile ./nix/config/options.lua}
+    '';
+  };       
   programs.firefox.enable = true;
   programs.tmux = {
     enable = true;
     shortcut = "Space";
-  };
+    baseIndex = 1;
+    newSession = true;
+    escapeTime = 0;
+    
+    plugins = with pkgs; [
+      tmuxPlugins.sensible
+      tmuxPlugins.yank
+      tmuxPlugins.better-mouse-mode
+      tmuxPlugins.dracula
+    ];
+    extraConfig = ''
+      set-option -sa terminal-overrides ",xterm*:Tc"
+      set -g mouse on
+    '';
+ };
   # Nicely reload system units when changing configs
   systemd.user.startServices = "sd-switch";
 
