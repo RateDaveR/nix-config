@@ -37,7 +37,11 @@
       allowUnfreePredicate = _: true;
     };
   };
-
+  
+  home.packages = with pkgs; [
+    gcc
+    ripgrep
+  ];
   programs.zsh = {
     enable = true;
     enableAutosuggestions = true;
@@ -109,6 +113,7 @@
         plugin = nvim-lspconfig;
         config = toLuaFile ./nvim/config/plugins/lsp.lua;
     }
+    telescope-nvim
     ];
     extraLuaConfig = ''
       ${builtins.readFile ./nvim/config/options.lua}
