@@ -37,6 +37,7 @@
       allowUnfreePredicate = _: true;
     };
   };
+
   programs.zsh = {
     enable = true;
     enableAutosuggestions = true;
@@ -100,7 +101,8 @@
                 python
                 go
                 typescript
-            ];
+            ]
+        );
         config = toLuaFile ./nvim/config/plugins/treesitter.lua;
     }
     {
