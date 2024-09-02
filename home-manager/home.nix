@@ -71,14 +71,20 @@
         }/bin/git-credential-libsecret";
     };
   };
-  programs.kitty.enable = true;
-
+  programs.kitty = {
+    enable = true;
+    configFile = ../env/.config/kitty/kitty.confg;
+  };
   programs.neovim = {
     enable = true;
     viAlias = true;
     vimAlias = true;
   };
   programs.firefox.enable = true;
+  programs.tmux = {
+    enable = true;
+    shortcut = "Space";
+  };
   # Nicely reload system units when changing configs
   systemd.user.startServices = "sd-switch";
 
