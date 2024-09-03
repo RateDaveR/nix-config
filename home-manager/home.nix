@@ -24,6 +24,7 @@
   home.packages = with pkgs; [
     gcc
     ripgrep
+    libsecret
   ];
 
   home = {
