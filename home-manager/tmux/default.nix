@@ -1,4 +1,4 @@
-{ pkgs, ...};
+{ pkgs, ...}:
 {
     programs.tmux = {
         enable = true;
@@ -18,4 +18,4 @@
             set -g mouse on
             '';
     };
-};
+}
