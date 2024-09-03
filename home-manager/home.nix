@@ -33,11 +33,9 @@
 
   # Programs that are not imported. These are simple ones with minimal configs.
   programs.home-manager.enable = true;
-  programs.kitty = {
-    enable = true;
-  };
-  
+  programs.kitty.enable = true;
   programs.firefox.enable = true;
+  
   # Nicely reload system units when changing configs
   systemd.user.startServices = "sd-switch";
 
