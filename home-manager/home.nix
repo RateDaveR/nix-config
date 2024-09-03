@@ -9,7 +9,8 @@
     ./nvim/default.nix
     ./tmux/default.nix
     ./zsh/default.nix
-  ];
+    ./git/default.nix
+ ];
 
   nixpkgs = {
     overlays = [];
@@ -25,28 +26,13 @@
     ripgrep
   ];
 
-  # TODO: Set your username
   home = {
     username = "daveved";
     homeDirectory = "/home/daveved";
   };
 
-  # Add stuff for your user as you see fit:
-  # programs.neovim.enable = true;
-  # home.packages = with pkgs; [ steam ];
-
-  # Enable home-manager and git
+  # Programs that are not imported. These are simple ones with minimal configs.
   programs.home-manager.enable = true;
-  programs.git = {
-    enable = true;
-    userName = "DaveVED";
-    userEmail = "dave.dennis@gs.com";
-    extraConfig = {
-      credential.helper = "${
-          pkgs.git.override { withLibsecret = true; }
-        }/bin/git-credential-libsecret";
-    };
-  };
   programs.kitty = {
     enable = true;
   };
