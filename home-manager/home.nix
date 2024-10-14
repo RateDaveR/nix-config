@@ -25,6 +25,9 @@
     gcc
     ripgrep
     libsecret
+    tree
+    nodePackages.typescript
+    nodePackages.typescript-language-server
   ];
 
   home = {

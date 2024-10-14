@@ -32,6 +32,7 @@ in {
         config = toLuaFile ./config/plugins/lsp.lua;
       }
       telescope-nvim
+      nerdtree
     ];
     extraLuaConfig = ''
       ${builtins.readFile ./config/options.lua}

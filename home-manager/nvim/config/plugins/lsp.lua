@@ -38,10 +38,6 @@ lspconfig.pyright.setup {
 -- TypeScript/JavaScript
 lspconfig.tsserver.setup {
     on_attach = on_attach,
-    handlers = {
-        ["textDocument/publishDiagnostics"] = function() end,
-    },
-    file_types = {"typescript", "typescriptreact", "javascript", "javascriptreact"},
 }
 
 -- Go
