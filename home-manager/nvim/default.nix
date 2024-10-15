@@ -37,7 +37,7 @@ in {
       }
       {
         plugin = nvim-cmp;
-        config = toLuaFile ./nvim/plugins/cmp.lua
+        config = toLuaFile ./nvim/plugins/cmp.lua;
       }
       telescope-nvim
       vim-tmux-navigator
