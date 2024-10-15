@@ -11,8 +11,8 @@ in {
     vimdiffAlias = true;
     plugins = with pkgs.vimPlugins; [
       {
-        plugin = rose-pine;
-        config = "colorscheme rose-pine";
+          plugin = rose-pine;
+          config = "colorscheme rose-pine";
       }
       {
         plugin = nvim-treesitter.withPlugins (treesitter-plugins: 
@@ -31,8 +31,11 @@ in {
         plugin = nvim-lspconfig;
         config = toLuaFile ./config/plugins/lsp.lua;
       }
+      {
+        plugin = nvim-tree-lua;
+        config = toLuaFile ./config/plugins/nvim_tree.lua;
+      }
       telescope-nvim
-      nvim-tree-lua
       cmp-nvim-lsp
       cmp-nvim-lsp-signature-help
       cmp-buffer
