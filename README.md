@@ -4,6 +4,8 @@ These are my personal [nixos](https://nixos.org) configuration files. A good
 starter for your own nixos configs can be found 
 [here](https://github.com/Misterio77/nix-starter-configs).
 
+These are custom to me.
+
 ## Get rocking and rolling
 
 On a new box the following gets me going. 
