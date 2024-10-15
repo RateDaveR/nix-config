@@ -35,8 +35,17 @@ in {
         plugin = nvim-tree-lua;
         config = toLuaFile ./config/plugins/nvim_tree.lua;
       }
+      {
+        plugin = nvim-cmp;
+        config = toLuaFile ./nvim/plugins/cmp.lua
+      }
       telescope-nvim
+      vim-tmux-navigator
+      nvim-web-devicons
+      vim-glsl
       cmp-nvim-lsp
+      luasnip
+      cmp_luasnip
       cmp-nvim-lsp-signature-help
       cmp-buffer
     ];
