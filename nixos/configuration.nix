@@ -103,8 +103,5 @@
     };
 
     system.stateVersion = "24.05";
-    system.autoUpgrade = {
-        enable = true;
-        numberOfGenerations = 5;
     };
 }
