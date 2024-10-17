@@ -28,6 +28,7 @@
     tree
     nodePackages.typescript
     nodePackages.typescript-language-server
+    bun
   ];
 
   home = {
