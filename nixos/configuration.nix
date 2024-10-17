@@ -103,4 +103,9 @@
     };
 
     system.stateVersion = "24.05";
+    system.sutoUpgrade = {
+        enable = true;
+        autoClean = true;
+        numberOfGenerations = 5;
+    };
 }
