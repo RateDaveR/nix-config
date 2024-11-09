@@ -10,6 +10,7 @@
     ./tmux/default.nix
     ./zsh/default.nix
     ./git/default.nix
+    ./vscode/default.nix
  ];
 
   nixpkgs = {
