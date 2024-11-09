@@ -1,3 +1,4 @@
+{ pkgs, ...}:
 {
     programs.vscode = {
         enable = true;
@@ -5,7 +6,6 @@
             ms-python.python
             ms-python.vscode-pylance
             bbenoist.nix
-            ms-vscode.vscode-typescript-next # Official TypeScript extension
         ] ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
             {
                 name = "tokyo-night";
@@ -37,20 +37,11 @@
                 version = "1.3.0";
                 sha256 = "sha256-rHST7CYCVins3fqXC+FYiS5Xgcjmi7QW7M4yFrUR04U=";
             }
-            {
-                name = "esbenp.prettier-vscode"; # Prettier for TypeScript formatting
-                publisher = "esbenp";
-                version = "9.10.4";
-                sha256 = "sha256-dR9Es4lbm4FRKf5adP/lT8c5fSfRzAhPyfhqfXriiw4=";
-            }
         ];
         userSettings = {
             "workbench.colorTheme" = "Tokyo Night nv";
             "line-length-checker.lineLength" = 95;
             "git.ignoreMissingGitWarning" = true;
-            "typescript.format.enable" = true;
-            "typescript.preferences.importModuleSpecifier" = "relative";
-            "typescript.tsdk" = "~/.vscode/extensions/ms-vscode.vscode-typescript-next-5.3.2/node_modules/typescript/lib";
         };
     };
 }

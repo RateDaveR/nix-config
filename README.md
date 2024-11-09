@@ -16,3 +16,5 @@ export NIX_CONFIG="experimental-features = nix-command flakes"
 nix flake update
 sudo nixos-rebuild switch --flake .#dev
 ```
+
+code --password-store="gnome-libsecret"
