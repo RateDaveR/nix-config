@@ -49,7 +49,9 @@
             initialPassword = "bingbong";
         };
     };
-
+    sound.enable = true;
+  hardware.pulseaudio.enable = true;
+  nixpkgs.config.pulseaudio = true;
     boot.loader.systemd-boot.enable = true;
     boot.loader.efi.canTouchEfiVariables = true;
 
@@ -101,6 +103,7 @@
         layout = "us";
         variant = "";
     };
+    
 
     system.stateVersion = "24.05";
 }
