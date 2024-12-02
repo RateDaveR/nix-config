@@ -40,8 +40,6 @@ in {
         config = toLuaFile ./config/plugins/cmp.lua;
       }
       telescope-nvim
-      vim-tmux-navigator
-      nvim-web-devicons
       vim-glsl
       cmp-nvim-lsp
       luasnip
