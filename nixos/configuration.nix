@@ -42,6 +42,7 @@
 
     home-manager.users.daveved = import ../home-manager/home.nix;
     programs.zsh.enable = true;
+
     users.users = {
         daveved = {
             isNormalUser = true;
@@ -108,7 +109,5 @@ services.pipewire.pulse.enable = false;
         variant = "";
     };
     
-programs.rio.enable = false;
-
     system.stateVersion = "24.05";
 }
