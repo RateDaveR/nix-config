@@ -50,9 +50,12 @@
             initialPassword = "bingbong";
         };
     };
-    sound.enable = true;
+
   hardware.pulseaudio.enable = true;
-  nixpkgs.config.pulseaudio = true;
+nixpkgs.config.pulseaudio = true;
+services.pipewire.enable = false;
+services.pipewire.pulse.enable = false;
+
     boot.loader.systemd-boot.enable = true;
     boot.loader.efi.canTouchEfiVariables = true;
 
@@ -105,6 +108,7 @@
         variant = "";
     };
     
+programs.rio.enable = false;
 
     system.stateVersion = "24.05";
 }
