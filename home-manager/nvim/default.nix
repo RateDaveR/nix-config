@@ -32,10 +32,6 @@ in {
         config = toLuaFile ./config/plugins/lsp.lua;
       }
       {
-        plugin = nvim-tree-lua;
-        config = toLuaFile ./config/plugins/nvim_tree.lua;
-      }
-      {
         plugin = nvim-cmp;
         config = toLuaFile ./config/plugins/cmp.lua;
       }
