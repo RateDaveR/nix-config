@@ -21,7 +21,7 @@
       allowUnfreePredicate = _: true;
     };
   };
-  
+
   home.packages = with pkgs; [
     gcc
     ripgrep
@@ -41,6 +41,11 @@
   programs.home-manager.enable = true;
   programs.kitty.enable = true;
   programs.firefox.enable = true;
+  programs.rio.enable = true;
+  programs.rio.settings = {
+    font.size = 14;
+    colors.background = "#1e1e1e";
+  };
 
   # Nicely reload system units when changing configs
   systemd.user.startServices = "sd-switch";
