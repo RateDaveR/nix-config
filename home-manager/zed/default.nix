@@ -8,12 +8,12 @@
             hour_format = "hour24";
             auto_update = false;
 
-            vim_mode = true;
+            # vim_mode = true;
             ## tell zed to use direnv and direnv can use a flake.nix enviroment.
             load_direnv = "shell_hook";
             base_keymap = "VSCode";
             theme = {
-                mode = "system";
+                mode = "dark";
                 light = "One Light";
                 dark = "One Dark";
             };
