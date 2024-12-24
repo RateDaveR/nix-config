@@ -1,25 +1,53 @@
-{pkgs, lib, ... }:
+{ pkgs, lib, ... }:
 
 {
-    programs.zed-editor = {
-        enable = true;
-        extensions = ["nix"];
-        userSettings = {
-            hour_format = "hour24";
-            auto_update = false;
+  programs.zed-editor = {
+    enable = true;
+    extensions = ["nix" "python-lsp" "tmux"];
+    userSettings = {
+      hour_format = "hour24";
+      auto_update = false;
+      load_direnv = "shell_hook";
+      base_keymap = "VSCode";
+      theme = {
+        mode = "dark";
+        light = "One Light";
+        dark = "One Dark";
+      };
+      show_whitespaces = "all";
+      ui_font_size = 14;
+      buffer_font_size = 14;
 
-            # vim_mode = true;
-            ## tell zed to use direnv and direnv can use a flake.nix enviroment.
-            load_direnv = "shell_hook";
-            base_keymap = "VSCode";
-            theme = {
-                mode = "dark";
-                light = "One Light";
-                dark = "One Dark";
-            };
-            show_whitespaces = "all" ;
-            ui_font_size = 16;
-            buffer_font_size = 16;
+      node = {
+        path = lib.getExe pkgs.nodejs;
+        npm_path = lib.getExe' pkgs.nodejs "npm";
+      };
+
+      terminal = {
+        dock = "bottom";
+        font_family = "FiraCode Nerd Font";
+        line_height = "comfortable";
+        option_as_meta = false;
+        button = false;
+        shell = "system";
+        toolbar = {
+          title = true;
+          breadcrumbs = true;
         };
+      };
+
+      lsp = {
+        typescript = {
+          binary = {
+            path = "/run/current-system/sw/bin/tsserver";
+          };
+        };
+        nix = {
+          binary = {
+            path_lookup = true;
+          };
+        };
+      };
     };
+  };
 }
