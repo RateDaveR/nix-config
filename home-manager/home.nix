@@ -11,6 +11,7 @@
     ./zsh/default.nix
     ./git/default.nix
     ./vscode/default.nix
+    ./zed/default.nix
  ];
 
   nixpkgs = {
