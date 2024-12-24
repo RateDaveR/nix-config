@@ -11,6 +11,7 @@
     ./zsh/default.nix
     ./git/default.nix
     ./vscode/default.nix
+    ./zed/default.nix
  ];
 
   nixpkgs = {
@@ -46,10 +47,6 @@
     font.size = 14;
     colors.background = "#1e1e1e";
   };
-  programs.zed-editor = {
-    enable = true;
-  };
-  home-manager.backupFileExtension = "backup";
 
   # Nicely reload system units when changing configs
   systemd.user.startServices = "sd-switch";
