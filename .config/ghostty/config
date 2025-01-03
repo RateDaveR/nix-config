@@ -1,0 +1,9 @@
+gtk-tabs-location = hidden
+shell-integration = zsh
+window-decoration = false
+clipboard-paste-protection = false
+clipboard-read = allow
+window-theme = ghostty
+scrollback-limit = 10_000
+font-size = 14
+font-family = {{ termianl_font }}
