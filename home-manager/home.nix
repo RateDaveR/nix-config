@@ -32,6 +32,7 @@
     nodePackages.typescript-language-server
     bun
     flameshot
+    neofetch
   ];
 
   home = {

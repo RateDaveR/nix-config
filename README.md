@@ -8,9 +8,13 @@
 
 # My NixOS Configurations
 
-These are my personal [NixOS](https://nixos.org/) configuration files. They support my home lab and are evolving into a multi-host setup. While tailored to my needs, this project serves as a reference for others or enables rapid setup of a new Nix box using curl.
+These are my personal [NixOS](https://nixos.org/) configuration files. They
+support my home lab and are evolving into a multi-host setup. While tailored to
+my needs, this project serves as a reference for others or enables rapid setup
+of a new Nix box using curl.
 
-For a great starting point for your own NixOS configurations, check out [nix-starter-configs](https://github.com/Misterio77/nix-starter-configs).
+For a great starting point for your own NixOS configurations, check out
+[nix-starter-configs](https://github.com/Misterio77/nix-starter-configs).
 
 ## Table of Contents
 
@@ -30,7 +34,7 @@ For a great starting point for your own NixOS configurations, check out [nix-sta
 
 There are two main ways to set up a new box:
 
-### Using My CDN
+### Using My CDNecho $XDG_SESSION_TYPE
 
 This is the target state (though still slightly experimental). Run:
 
@@ -53,7 +57,8 @@ git clone https://github.com/DaveVED/nix-config.git && cd "$(basename "$_" .git)
 exit # Exit the nix-shell if needed.
 ```
 
-3. For new setups, copy the `hardware-configuration.nix` from `/etc/nixos` to your configuration folder:
+3. For new setups, copy the `hardware-configuration.nix` from `/etc/nixos` to
+   your configuration folder:
 
 ```bash
 cp /etc/nixos/hardware-configuration.nix ~/etc/nixos/
@@ -70,7 +75,8 @@ This minimal setup provides a ready-to-use Nix environment.
 
 ## Development Environment
 
-You can actively develop your Nix configurations using utilities provided in the `Makefile`. For example:
+You can actively develop your Nix configurations using utilities provided in the
+`Makefile`. For example:
 
 - `make format` formats files.
 - `make rebuild` rebuilds the configuration.
@@ -88,7 +94,7 @@ make rebuild
 ### Make Commands
 
 | Command                | Description                                          |
-|------------------------|------------------------------------------------------|
+| ---------------------- | ---------------------------------------------------- |
 | `make format`          | Formats files using Prettier.                        |
 | `make garbage-collect` | Cleans up the Nix store and removes old generations. |
 | `make rebuild`         | Rebuilds the NixOS configuration.                    |
@@ -102,7 +108,8 @@ make rebuild
 
 The configuration includes:
 
-- **Neovim**: A hyperextensible text editor with custom configurations. Aliases `vi` and `vim` to Neovim.
+- **Neovim**: A hyperextensible text editor with custom configurations. Aliases
+  `vi` and `vim` to Neovim.
 - **Tmux**: A terminal multiplexer for managing persistent sessions.
 - **Zsh & Oh My Zsh**: An interactive shell with theming and ease of use.
 - **Git**: Basic setup with keyring integration.
@@ -129,7 +136,8 @@ The configuration includes:
 
 ### Dotfile Management with Home Manager
 
-Manage dotfiles declaratively with `home-manager`, enabling reproducible environments. Example configurations include:
+Manage dotfiles declaratively with `home-manager`, enabling reproducible
+environments. Example configurations include:
 
 - `home-manager/zsh/default.nix`: Minimal Zsh configuration.
 - `home-manager/nvim/default.nix`: Advanced Neovim setup.
@@ -138,11 +146,13 @@ Run `man home-configuration.nix` for more `home-manager` options.
 
 ## TODO
 
-- [ ] Bind Firefox to a key combination or explore `nohup` to prevent closure when the terminal is closed.
+- [ ] Bind Firefox to a key combination or explore `nohup` to prevent closure
+      when the terminal is closed.
 - [ ] Explore persistence options for home lab setups.
 - [ ] Add more hosts and users to the configuration.
 - [ ] Integrate advanced secret management tools like `sops-nix` or `pass`.
 - [ ] Investigate Hydra for CI/CD and binary caching.
 - [ ] Research opt-in persistence setups for fully reproducible systems.
 - [ ] Improve documentation and modularize configurations further.
-
+- [ ] Custom packages, and overlays, would be a good thing to learn.
+- [ ] Gotta move off `x11`
