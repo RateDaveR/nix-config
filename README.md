@@ -1,4 +1,4 @@
-# nix-config (blah)
+# nix-config (blah blah blah)
 
 These are my personal [nixos](https://nixos.org) configuration files. A good 
 starter for your own nixos configs can be found 

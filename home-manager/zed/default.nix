@@ -34,6 +34,12 @@
           title = true;
           breadcrumbs = true;
         };
+         detect_venv = {
+                    on = {
+                        directories = [".env" "env" ".venv" "venv"];
+                        activate_script = "default";
+                    };
+                };
       };
 
       lsp = {

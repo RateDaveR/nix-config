@@ -39,7 +39,9 @@
 
 
     networking.hostName = "dev";
-
+    
+    programs.nix-ld.enable = true;
+    
     home-manager.users.daveved = import ../home-manager/home.nix;
     programs.zsh.enable = true;
 
