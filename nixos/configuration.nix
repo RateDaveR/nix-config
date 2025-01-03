@@ -80,9 +80,26 @@ services.pipewire.pulse.enable = false;
         LC_TIME = "en_US.UTF-8";
     };
 
-environment.systemPackages = with pkgs; [
-  picom
-];
+environment.systemPackages = with pkgs; [ feh ];
+
+services.picom = {
+  enable = true;
+  fade = true;
+  inactiveOpacity = 0.7;
+  activeOpacity = 1;
+
+  settings = {
+    blur = {
+      method = "gaussian";
+      size = 10;
+      deviation = 5.0;
+    };
+
+    opacity-rule = [
+      "70:class_g = 'Ghostty'"  # Applies 70% opacity to Ghostty terminal
+    ];
+  };
+};
 
 #i3 take it or leave it. 
     services.xserver = {
