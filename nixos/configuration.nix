@@ -80,6 +80,10 @@ services.pipewire.pulse.enable = false;
         LC_TIME = "en_US.UTF-8";
     };
 
+environment.systemPackages = with pkgs; [
+  picom
+];
+
 #i3 take it or leave it. 
     services.xserver = {
         enable = true;
@@ -111,5 +115,5 @@ services.pipewire.pulse.enable = false;
         variant = "";
     };
     
-    system.stateVersion = "24.05";
+    system.stateVersion = "25.05";
 }
