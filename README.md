@@ -1,7 +1,7 @@
 <p align="center">
   <a href="https://github.com/DaveVED/nix-config">
     <picture>
-      <img src="https://raw.githubusercontent.com/DaveVED/nix-config/main/assets/screenshot.jpg" alt="OpenAuth logo">
+      <img src="https://raw.githubusercontent.com/DaveVED/nix-config/main/assets/screenshot-v2.jpg" alt="OpenAuth logo">
     </picture>
   </a>
 </p>
@@ -150,9 +150,22 @@ Run `man home-configuration.nix` for more `home-manager` options.
       when the terminal is closed.
 - [ ] Explore persistence options for home lab setups.
 - [ ] Add more hosts and users to the configuration.
-- [ ] Integrate advanced secret management tools like `sops-nix` or `pass`.
+- [ ] Integrate advanced secret management tools like `sops-nix` or `pass`. - Higest, we need ssh.
 - [ ] Investigate Hydra for CI/CD and binary caching.
-- [ ] Research opt-in persistence setups for fully reproducible systems.
+- [ ] Research opt-in persistence setups for fully reproducible systems. - Highest
 - [ ] Improve documentation and modularize configurations further.
 - [ ] Custom packages, and overlays, would be a good thing to learn.
-- [ ] Gotta move off `x11`
+- [ ] Gotta move off `x11`, wayland? - Highest
+
+## My Bindings
+
+Please find a random cheet sheet of my bindings by application for reference.
+Everyone has a differnt taste or style, and this is just what I like. This
+is of course not all my bindings, but just some of the ones you may need to get
+started.
+
+| Binding        | Description                       | Application |
+| -------------- | --------------------------------- | ----------- |
+| `$mod+enter`   | Opens a new terminal in           | i3          |
+| `$mod+q`       | Closes the current winodw         | i3          |
+| `$mod+Shift+s` | take a screenshot using flameshot | i3          |
