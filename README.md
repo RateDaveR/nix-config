@@ -1,7 +1,7 @@
 <p align="center">
   <a href="https://github.com/DaveVED/nix-config">
     <picture>
-      <img src="https://raw.githubusercontent.com/DaveVED/nix-config/main/assets/screenshot-v2.jpg" alt="OpenAuth logo">
+      <img src="https://raw.githubusercontent.com/DaveVED/nix-config/main/assets/screenshot-v2.png" alt="OpenAuth logo">
     </picture>
   </a>
 </p>
