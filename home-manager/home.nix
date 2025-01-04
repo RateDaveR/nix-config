@@ -33,6 +33,7 @@
     bun
     flameshot
     neofetch
+    discord-ptb
   ];
 
   home = {
