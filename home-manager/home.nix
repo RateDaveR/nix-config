@@ -34,6 +34,7 @@
     flameshot
     neofetch
     discord
+    gnupg
   ];
 
   home = {
