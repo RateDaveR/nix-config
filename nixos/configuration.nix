@@ -30,7 +30,7 @@
         registry = lib.mapAttrs (_: flake: {inherit flake;}) flakeInputs;
         nixPath = lib.mapAttrsToList (n: _: "${n}=flake:${n}") flakeInputs;
     };
-
+    
     services.earlyoom = {
         enable = true;
     };
@@ -42,6 +42,12 @@
     
     programs.nix-ld.enable = true;
     
+    services.pcscd.enable = true;
+programs.gnupg.agent = {
+   enable = true;
+   enableSSHSupport = true;
+};
+
     home-manager.users.daveved = import ../home-manager/home.nix;
     programs.zsh.enable = true;
 

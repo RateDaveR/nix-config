@@ -170,3 +170,49 @@ started.
 | `$mod+enter`   | Opens a new terminal in           | i3          |
 | `$mod+q`       | Closes the current winodw         | i3          |
 | `$mod+Shift+s` | take a screenshot using flameshot | i3          |
+
+## Generate your own GPG
+
+```bash
+gpg --full-generate-key
+# Choose RSA and RSA (option 1). This allows for both signing and encryption.
+# Use 4096 bits (strong security).
+# Set it to 0 (never expires) or a duration like 2y (2 years). If you choose a duration, you can renew the key later.
+# Enter your real name (e.g., "David Wayne Dennis") and email address (e.g., your_email@example.com).
+# Comment: Optional, but you can use it for clarity (e.g., "General purpose key").
+# Choose a strong passphrase to protect your private key.
+gpg --list-keys
+# Take note of your key fingerprint (40-character string).
+
+# To share your public key (e.g., on your website):
+gpg --armor --export your_email@example.com > public_key.asc
+# This creates a file called public_key.asc containing:
+
+# you can play wiht it. 
+gpg --fingerprint
+
+echo "Hello, world!" > file.txt
+gpg --sign --armor file.txt
+gpg --verify file.txt.asc
+echo "This is a signed message from me, David Wayne Dennis II." > message.txt
+gpg --sign --armor message.txt
+--sign: Tells GPG to sign the file.
+--armor: Creates an ASCII-armored (text-based) signature.
+message.txt: The file you’re signing.
+
+This will generate a file called message.txt.asc that contains the original message and your signature. Example:
+
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA256
+
+This is a signed message from me, David Wayne Dennis II.
+-----BEGIN PGP SIGNATURE-----
+...
+... (signature data) ...
+...
+-----END PGP SIGNATURE-----
+
+# If you dont' have my key downlodaed, you need to import it
+gpg --import public_key.asc
+gpg --verify message.txt.asc
+```

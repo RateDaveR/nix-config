@@ -34,7 +34,7 @@
     flameshot
     neofetch
     discord
-    gnupg
+  pinentry
   ];
 
   home = {
@@ -50,7 +50,7 @@
     font.size = 14;
     colors.background = "#1e1e1e";
   };
-
+ 
   # Nicely reload system units when changing configs
   systemd.user.startServices = "sd-switch";
 
