@@ -4,9 +4,10 @@
       <img src="https://raw.githubusercontent.com/DaveVED/nix-config/main/assets/screenshot-v2.png" alt="OpenAuth logo">
     </picture>
   </a>
+  
+  ## NixOS Configurations
 </p>
 
-# My NixOS Configurations
 
 These are my personal [NixOS](https://nixos.org/) configuration files. They
 support my home lab and are evolving into a multi-host setup. While tailored to
