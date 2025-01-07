@@ -12,7 +12,7 @@
     ./git/default.nix
     ./vscode/default.nix
     # ./zed/default.nix
- ];
+  ];
 
   nixpkgs = {
     overlays = [];
@@ -34,7 +34,8 @@
     flameshot
     neofetch
     discord
-  pinentry
+    pinentry
+    zls
   ];
 
   home = {
@@ -50,7 +51,7 @@
     font.size = 14;
     colors.background = "#1e1e1e";
   };
- 
+
   # Nicely reload system units when changing configs
   systemd.user.startServices = "sd-switch";
 

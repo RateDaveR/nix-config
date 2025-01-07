@@ -7,8 +7,8 @@
     home-manager.url = "github:nix-community/home-manager/master";
     #home-manager.url = "github:nix-community/home-manager/master";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
-    ghostty= {
-        url = "github:ghostty-org/ghostty";
+    ghostty = {
+      url = "github:ghostty-org/ghostty";
     };
   };
 
@@ -27,7 +27,7 @@
         modules = [
           ./nixos/configuration.nix
           {
-                       environment.systemPackages = [
+            environment.systemPackages = [
               ghostty.packages.x86_64-linux.default
             ];
           }
@@ -35,12 +35,12 @@
       };
     };
 
-   templates = {
-     default = {
-       description = ''
-       Personal nix-configs.
-       '';
-     };
-   };
+    templates = {
+      default = {
+        description = ''
+          Personal nix-configs.
+        '';
+      };
+    };
   };
 }

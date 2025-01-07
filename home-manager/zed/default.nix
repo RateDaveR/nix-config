@@ -1,6 +1,8 @@
-{ pkgs, lib, ... }:
-
 {
+  pkgs,
+  lib,
+  ...
+}: {
   programs.zed-editor = {
     enable = true;
     extensions = ["nix" "python-lsp" "tmux"];
@@ -34,12 +36,12 @@
           title = true;
           breadcrumbs = true;
         };
-         detect_venv = {
-                    on = {
-                        directories = [".env" "env" ".venv" "venv"];
-                        activate_script = "default";
-                    };
-                };
+        detect_venv = {
+          on = {
+            directories = [".env" "env" ".venv" "venv"];
+            activate_script = "default";
+          };
+        };
       };
 
       lsp = {

@@ -46,6 +46,10 @@ link-config:
 	ln -sf $(PWD)/.config ~/.config
 	@echo "Symlinks created for .config files."
 
+.PHONY: fmt
+fmt:
+	alejandra . -q
+
 # Help target to display available commands
 .PHONY: help
 help:

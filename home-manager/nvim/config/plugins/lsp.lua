@@ -53,3 +53,11 @@ lspconfig.gopls.setup {
     },
 }
 
+-- Zig
+lspconfig.zls.setup {
+    on_attach = on_attach,
+    handlers = {
+        ["textDocument/publishDiagnostics"] = function() end,
+    },
+    file_types = {"zig"},
+}

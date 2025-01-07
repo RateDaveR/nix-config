@@ -1,6 +1,8 @@
-{ pkgs, lib, ... }:
-
-let
+{
+  pkgs,
+  lib,
+  ...
+}: let
   toLua = str: "lua << EOF\n${str}\nEOF\n";
   toLuaFile = file: "lua << EOF\n${builtins.readFile file}\nEOF\n";
 in {
@@ -11,18 +13,20 @@ in {
     vimdiffAlias = true;
     plugins = with pkgs.vimPlugins; [
       {
-          plugin = rose-pine;
-          config = "colorscheme rose-pine";
+        plugin = rose-pine;
+        config = "colorscheme rose-pine";
       }
       {
-        plugin = nvim-treesitter.withPlugins (treesitter-plugins: 
+        plugin = nvim-treesitter.withPlugins (
+          treesitter-plugins:
             with treesitter-plugins; [
-                bash
-                lua
-                nix
-                python
-                go
-                typescript
+              bash
+              lua
+              nix
+              python
+              go
+              typescript
+              zig
             ]
         );
         config = toLuaFile ./config/plugins/treesitter.lua;
@@ -48,4 +52,3 @@ in {
     '';
   };
 }
-
